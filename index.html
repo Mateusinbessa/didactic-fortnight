@@ -13,14 +13,7 @@
     <script>
         tinymce.init({
             //my editor id
-            selector: '#mytextarea',
-            //setting content on initialization
-            setup: function (editor) {
-                editor.on('init', function (e) {
-                    //loading the save content from localstore automatically
-                    editor.setContent(localStorage.getItem("myContent"))
-                })
-            }
+            selector: '#mytextarea'
         })
     </script>
 
@@ -32,7 +25,6 @@
     <h1>TinyMCE</h1>
     <textarea id="mytextarea"></textarea>
     <button class="button" onclick="showHTML()">Show HTML Code</button>
-    <button class="button" onclick="myLoad()">Load</button>
     <!--My text area-->
 
     <h1>HTML Code</h1>
@@ -41,9 +33,6 @@
     <!--script to save the content on text area in localstorage-->
     <script src="./showHTML.js"></script>
 
-
-    <!--script to load from the localstorage and insert in the textarea-->
-    <script src="./loadHTML.js"></script>
 
 
 </body>

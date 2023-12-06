@@ -10,10 +10,7 @@ const puppetter = require('puppeteer');
         const page = await browser.newPage()
 
         //Storing the content
-        const content = `<h1>Testuando<span style="color: rgb(224, 62, 45);"><strong>editor</strong></span></h1>
-        <p><strong>Testando</strong></p>
-        <p>1) <em>Oi</em></p>
-        <p>2) <span style="color: rgb(224, 62, 45);">Ol&aacute;</span></p>`
+        const content = `<h1><span style="color: rgb(45, 194, 107);">Testando </span><span style="color: rgb(224, 62, 45);">editor</span></h1>`
 
         //Setting the content on the page
         await page.setContent(content)
