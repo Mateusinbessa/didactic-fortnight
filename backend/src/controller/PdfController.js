@@ -1,7 +1,6 @@
 import puppeteer from "puppeteer";
 
 export async function create(req, res) {
-    //Esse valores não estão sendo recebidos
     const { html } = req.body
 
     try {
@@ -24,7 +23,7 @@ export async function create(req, res) {
         await browser.close()
 
         res.status(201).json({ message: "PDF Criado com sucesso!" })
-    } catch (e) {
-        res.status(500).json({ message: "Erro!" })
+    } catch (error) {
+        res.status(500).json({ message: "Server Internal Error!" })
     }
 }

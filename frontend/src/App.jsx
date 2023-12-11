@@ -5,9 +5,9 @@ import style from "./App.module.css"
 function App() {
   const editorRef = useRef()
 
-  const [mensagem, setMensagem] = useState("")
-
   async function onClickHandler() {
+
+    //Getting the content from the editor
     const html = editorRef.current.getContent()
 
     const url = "http://localhost:3000/pdf/create"
