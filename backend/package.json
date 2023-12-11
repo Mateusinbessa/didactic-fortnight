@@ -2,17 +2,22 @@
   "name": "puppeteer",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "create": "node ./index.js"
+    "create": "node ./index.js",
+    "start": "nodemon ./src/index.js localhost 3000"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
     "fs-extra": "^11.2.0",
     "handlebars": "^4.7.8",
+    "nodemon": "^3.0.2",
     "puppeteer": "^21.5.2",
     "tinymce": "^6.8.1"
   }
