@@ -1,9 +1,11 @@
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 import { Editor } from "@tinymce/tinymce-react"
 import style from "./App.module.css"
 
 function App() {
   const editorRef = useRef()
+
+  const [mensagem, setMensagem] = useState("")
 
   async function onClickHandler() {
     const html = editorRef.current.getContent()
@@ -22,7 +24,7 @@ function App() {
         },
         body: JSON.stringify(content)
       })
-      console.log("Deu certo!")
+      alert("PDF Gerado com sucesso!")
     } catch (error) {
       console.log(error.message)
     }
@@ -35,7 +37,7 @@ function App() {
         initialValue='<p>This is the initial content of the editor.</p>'
       />
 
-      <button className={style.button} type='button' onClick={onClickHandler}>Enviar</button>
+      <button className={style.button} type='button' onClick={onClickHandler}>Gerar PDF</button>
     </>
   )
 }
