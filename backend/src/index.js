@@ -7,7 +7,7 @@ const app = express()
 app.use(express.json())
 
 //CORS 
-app.use(cors({ credentials: true, origin: 'http://127.0.0.1:5173' }))
+app.use(cors())
 
 //Routes
 import PdfRouter from "./routes/PdfRouter.js"
