@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon ./src/index.js localhost 3000"
+    "dev": "nodemon ./src/index.js localhost 3000",
+    "start": "node src/index.js"
   },
   "keywords": [],
   "author": "",
@@ -17,7 +18,7 @@
     "fs-extra": "^11.2.0",
     "handlebars": "^4.7.8",
     "nodemon": "^3.0.2",
-    "puppeteer": "^21.5.2",
+    "puppeteer": "^21.6.1",
     "tinymce": "^6.8.1"
   }
 }
