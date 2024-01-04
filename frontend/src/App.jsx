@@ -16,6 +16,8 @@ function App() {
       html
     }
 
+    console.log(html)
+
     try {
       const res = await fetch(url, {
         method: "POST",
